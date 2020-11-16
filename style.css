@@ -9,4 +9,29 @@ form {
   border-width: 1px;
   max-width: 30vw;
 }
+#chart{
+  font: 10px san-serif;
+  text-align: right;
+  color: white;
+}
+.bar{
+  background: black;
+  padding: 3px;
+  margin: 1px;
+}
+#one{
+  width: 100px;
+}
+#two{
+  width: 200px;
+}
+#three{
+  width: 300px;
+}
+#four{
+  width: 400px;
+}
+#five{
+  width: 500px;
+}
 

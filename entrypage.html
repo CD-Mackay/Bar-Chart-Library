@@ -6,10 +6,28 @@
     <title>Data Entry</title>
   </head>
   <body>
-<form action="unspecified">
+    <h1>Please enter the values for your graph</h1>
+<form action="unspecified" id="axis-label">
   <input type="text" placeholder="Label for X-axis">
   <input type="text" placeholder="Label for Y-axis">
-  <button type="submit">Apply</button>
+  <button type="button" form="axis-label">Apply</button>
 </form>
+<form action="unspecified" id="bar-values">
+  <input type="number" placeholder="Value for given data">
+  <button type="button" form="bar-values">Apply</button>
+</form>
+<script>
+  $(document).ready(function() {
+    $("#bar-values").hide();
+  });
+  
+  $(document).ready(function(){
+$("button").click(function(){
+  /* Function which will convert entered strings in variable for graph function*/
+  $("#axis-label").hide();
+  $("#bar-values").show();
+});
+});
+</script>
   </body>
 </html>

@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+}
+
+form {
+  margin: auto;
+  border-style: solid;
+  padding-right: 0;
+  border-width: 1px;
+  max-width: 30vw;
+}
+

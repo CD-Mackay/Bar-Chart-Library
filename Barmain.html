@@ -6,12 +6,21 @@
     <title>Bar Chart Library</title>
     <style>
     </style>
+    <script>
+      function barFunction() {
+        let height = document.getElementById("barValue").value;
+    let bar = document.createElement("div");
+    bar.style.width = height;
+    bar.style.height = "20 px"
+    $("#chart").prepend(bar);
+
+    
+    }
+    </script>
   </head>
   <body>
     <script src="jquery-3.5.1.js"></script>
     <!--<script src="https://gist.github.com/daegren/24a18989683213fe6fb934fc4f789db4.js"></script>-->
-    <script>
-    </script>
 <div id="Title">
   <h1>Welcome to Connor's Bar Chart Library</h1>
   <h3>A practice project made with jQuery</h3>
@@ -20,13 +29,10 @@
   <h3>Click the button below to get started building your graph!</h3>
   <p>Click<a href="entrypage.html" target="_blank">here!</a></p>
 </div>
+  <label for="barValue">Please Enter a Number</label>
+  <input type="number" id="barValue" name="barValue" min="1" max="10">
+  <input type="submit" formtarget="#chart" onclick="barFunction()">
 <div id="chart">
-  <div id="one" class="bar">One</div>
-  <div id="two" class="bar">Two</div>
-  <div id="three" class="bar">Three</div>
-  <div id="four" class="bar">Four</div>
-  <div id="five" class="bar">Five</div>
-
 </div>
   </body>
 </html>

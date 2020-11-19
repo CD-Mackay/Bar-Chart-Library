@@ -14,13 +14,11 @@ form {
   font: 10px san-serif;
   text-align: right;
   border-style: ridge;
-  height: 1000px;
-  width: 1000px;
+  height: 800px;
+  width: 800px;
   padding: 0;
   margin: 0;
   grid-area: chart;
-  
-
 }
 #chartAndLabels {
   display: grid;
@@ -34,12 +32,19 @@ form {
   padding: 3px;
   margin: 1px;
 }
+#range {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 #yLabel {
   height: auto;
   width: 20px;
   grid-area: yLabel;
   text-orientation: upright;
   writing-mode: vertical-lr;
+  margin: 0;
+  align-self: right;
 }
 #xLabel {
   grid-area: xLabel;

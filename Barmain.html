@@ -7,6 +7,15 @@
     <style>
     </style>
     <script>
+      function rangeFunction() {
+        let maxRange = document.getElementById("maxValue").value;
+        let range = document.getElementById("range")
+        let step = maxRange / 10;
+        for (let i = maxRange; i >= 0; i -= step) {
+          let text = $("<p></p>").text(i);
+          $("#range").prepend(text);
+        } $("#chart").prepend(range);
+      }
       function labelFunction() {
         let xLabel = document.getElementById("xAxis").value;
         let yLabel = document.getElementById("yAxis").value;
@@ -45,10 +54,16 @@
   <h3>Click the button below to get started building your graph!</h3>
   <p>Click<a href="entrypage.html" target="_blank">here!</a></p>
 </div>
+<div id="rangeValue">
+  <label for="maxValue">Please define the Maximum Value of your Chart</label>
+  <input type="number" id="maxValue" name="maxValue">
+  <button type="submit" onclick="rangeFunction()">Set Range</button>
+</div>
+<br>
 <div id="chartSize">
-  <label for="chartHeight">Height(px) (default = 1000px)</label>
+  <label for="chartHeight">Height(px) (default = 800px)</label>
   <input type="number" id="chartHeight" name="chartHeight" min="100" max="1000">
-  <label for="chartWidth">Width(px) (default = 1000px)</label>
+  <label for="chartWidth">Width(px) (default = 800px)</label>
   <input type="number" id="chartWidth" name="chartWidth" min="100" max="1000">
   <button type="submit" onclick="chartFunction()">Apply Changes</button>
 </div>
@@ -61,6 +76,7 @@
   <button type="submit" onclick="labelFunction()">Apply Changes</button>
 </div>
 <br>
+<div id="barSelect">
   <label for="barValue">Please Enter a Number</label>
   <input type="number" id="barValue" name="barValue" min="1" max="10">
   <label for="barLabel">Select the Label for this Bar</label>
@@ -72,6 +88,7 @@
     <option value="green">Green</option>
   </select>
   <button type="submit" onclick="barFunction()">Click to add new Bar</button>
+</div>
     <br>
 <br>
 <div>
@@ -79,6 +96,8 @@
 </div>
 <div id="chartAndLabels">
 <div id="chart">
+</div>
+<div id="range">
 </div>
 <div id="labels">
   <p id="yLabel">Lorem Ipsum</p>

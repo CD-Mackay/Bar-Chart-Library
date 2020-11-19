@@ -10,11 +10,15 @@ form {
   max-width: 30vw;
 }
 #chart{
+  display: inline-block;
   font: 10px san-serif;
   text-align: right;
-  color: blue;
-  max-width: 1000px;
   border-style: ridge;
+  height: 1000px;
+  width: 1000px;
+  padding: 0;
+  margin: auto;
+  
 
 }
 .bar{
@@ -22,5 +26,11 @@ form {
   color: red;
   padding: 3px;
   margin: 1px;
+}
+#yLabel {
+  position: fixed;
+  left: 0;
+  height: auto;
+  width: 20px;
 }
 

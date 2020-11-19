@@ -7,14 +7,27 @@
     <style>
     </style>
     <script>
+      function labelFunction() {
+        let xLabel = document.getElementById("xAxis").value;
+        let yLabel = document.getElementById("yAxis").value;
+        $("p").createElement
+      }
+      function chartFunction() {
+        let chart = document.getElementById("chart");
+        let height = document.getElementById("chartHeight").value;
+        let width = document.getElementById("chartWidth").value;
+        chart.style.width = width + "px"
+        chart.style.height = height + "px"
+      }
       function barFunction() {
         let height = document.getElementById("barValue").value;
         let label = document.getElementById("barLabel").value;
         let color = document.getElementById("barColor").value;
     let bar = document.createElement("div");
     bar.textContent = label;
-    bar.style.width = (height * 100) + "px"
-    bar.style.height = "20px"
+    //bar.style.position = "absolute"
+    bar.style.width = (height * 10) + "%"
+    bar.style.height = "10%"
     bar.style.backgroundColor = color;
     $("#chart").prepend(bar);
     }
@@ -31,6 +44,22 @@
   <h3>Click the button below to get started building your graph!</h3>
   <p>Click<a href="entrypage.html" target="_blank">here!</a></p>
 </div>
+<div id="chartSize">
+  <label for="chartHeight">Height(px) (default = 1000px)</label>
+  <input type="number" id="chartHeight" name="chartHeight" min="100" max="1000">
+  <label for="chartWidth">Width(px) (default = 1000px)</label>
+  <input type="number" id="chartWidth" name="chartWidth" min="100" max="1000">
+  <button type="submit" onclick="chartFunction()">Apply Changes</button>
+</div>
+<br>
+<div id="chartLabels">
+  <label for="xAxis">Define the label for the X-axis</label>
+  <input type="text" id="xAxis" name="xAxis">
+  <label for="yAxis">Define the label for the Y-axis</label>
+  <input type="text" id="yAxis" name="yAxis">
+  <button type="submit" onclick="labelFunction()">Apply Changes</button>
+</div>
+<br>
   <label for="barValue">Please Enter a Number</label>
   <input type="number" id="barValue" name="barValue" min="1" max="10">
   <label for="barLabel">Select the Label for this Bar</label>
@@ -48,6 +77,10 @@
   <p>Here is your chart</p>
 </div>
 <div id="chart">
+</div>
+<div id="labels">
+  <p id="xLabel">Lorem Ipsum</p>
+  <p id="yLabel">Lorem Ipsum</p>
 </div>
   </body>
 </html>

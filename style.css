@@ -17,9 +17,16 @@ form {
   height: 1000px;
   width: 1000px;
   padding: 0;
-  margin: auto;
+  margin: 0;
+  grid-area: chart;
   
 
+}
+#chartAndLabels {
+  display: grid;
+  grid-template-areas: 
+  "yLabel chart"
+  "yLabel chart"
 }
 .bar{
   background:red;
@@ -28,9 +35,14 @@ form {
   margin: 1px;
 }
 #yLabel {
-  position: fixed;
-  left: 0;
   height: auto;
   width: 20px;
+  grid-area: yLabel;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+}
+#xLabel {
+  grid-area: xLabel;
+
 }
 

@@ -10,7 +10,8 @@
       function labelFunction() {
         let xLabel = document.getElementById("xAxis").value;
         let yLabel = document.getElementById("yAxis").value;
-        $("p").createElement
+        $("#yLabel").text(yLabel);
+        $("#xLabel").text(xLabel);
       }
       function chartFunction() {
         let chart = document.getElementById("chart");
@@ -76,11 +77,13 @@
 <div>
   <p>Here is your chart</p>
 </div>
+<div id="chartAndLabels">
 <div id="chart">
 </div>
 <div id="labels">
-  <p id="xLabel">Lorem Ipsum</p>
   <p id="yLabel">Lorem Ipsum</p>
 </div>
+</div>
+<p id="xLabel">Lorem Ipsum</p>
   </body>
 </html>

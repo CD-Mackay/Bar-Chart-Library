@@ -10,11 +10,12 @@
       function barFunction() {
         let height = document.getElementById("barValue").value;
         let label = document.getElementById("barLabel").value;
+        let color = document.getElementById("barColor").value;
     let bar = document.createElement("div");
     bar.textContent = label;
     bar.style.width = (height * 100) + "px"
     bar.style.height = "20px"
-    bar.style.backgroundColor = "red"
+    bar.style.backgroundColor = color;
     $("#chart").prepend(bar);
     }
     </script>
@@ -34,11 +35,17 @@
   <input type="number" id="barValue" name="barValue" min="1" max="10">
   <label for="barLabel">Select the Label for this Bar</label>
   <input type="text" id="barLabel" name="barLabel">
+  <label for="barColor">Please select a color for this bar</label>
+  <select id="barColor" name="barColor">
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+  </select>
   <button type="submit" onclick="barFunction()">Click to add new Bar</button>
     <br>
 <br>
 <div>
-  <p>Here is your chart Ellen's face</p>
+  <p>Here is your chart</p>
 </div>
 <div id="chart">
 </div>

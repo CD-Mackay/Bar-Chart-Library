@@ -11,7 +11,7 @@ form {
 }
 #chart{
   display: inline-block;
-  font: 18px san-serif;
+  font: 14px san-serif;
   text-align: center;
   border-style: ridge;
   height: 800px;
@@ -36,6 +36,7 @@ form {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  
 }
 #yLabel {
   height: auto;
@@ -43,8 +44,8 @@ form {
   grid-area: yLabel;
   text-orientation: upright;
   writing-mode: vertical-lr;
-  margin: 0;
-  align-self: right;
+  margin-right: 0;
+  margin-left: auto;
 }
 #xLabel {
   grid-area: xLabel;

@@ -34,10 +34,10 @@
         let label = document.getElementById("barLabel").value;
         let color = document.getElementById("barColor").value;
     let bar = document.createElement("div");
+    $(bar).addClass("bar");
     bar.textContent = label;
-    //bar.style.position = "absolute"
     bar.style.width = (height * 10) + "%"
-    bar.style.height = "10%"
+    bar.style.color = "white";
     bar.style.backgroundColor = color;
     $("#chart").prepend(bar);
     }
@@ -86,6 +86,9 @@
     <option value="red">Red</option>
     <option value="blue">Blue</option>
     <option value="green">Green</option>
+    <option value="lime">Lime</option>
+    <option value="orchid">Orchid</option>
+    <option value="purple">Purple</option>
   </select>
   <button type="submit" onclick="barFunction()">Click to add new Bar</button>
 </div>

@@ -11,8 +11,8 @@ form {
 }
 #chart{
   display: inline-block;
-  font: 10px san-serif;
-  text-align: right;
+  font: 18px san-serif;
+  text-align: center;
   border-style: ridge;
   height: 800px;
   width: 800px;

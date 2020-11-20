@@ -33,7 +33,6 @@ form {
   margin: 1px;
 }
 #range {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   

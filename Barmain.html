@@ -9,13 +9,13 @@
     <script>
       function rangeFunction() {
         let maxRange = document.getElementById("maxValue").value;
-        let range = document.getElementById("range")
+        let range = document.getElementById("range");
         let step = maxRange / 10;
         for (let i = maxRange; i >= 0; i -= step) {
           let text = $("<p></p>").text(i);
           $("#range").prepend(text);
-        } $("#chart").prepend(range);
-      }
+        } $("#chart").append(range);
+      } 
       function labelFunction() {
         let xLabel = document.getElementById("xAxis").value;
         let yLabel = document.getElementById("yAxis").value;
@@ -102,12 +102,12 @@
 </div>
 <div id="chartAndLabels">
 <div id="chart">
-  <div id="range">
-  </div>
 </div>
 <div id="labels">
   <p id="yLabel">Lorem Ipsum</p>
 </div>
+</div>
+<div id="range">
 </div>
 <p id="xLabel">Lorem Ipsum</p>
   </body>

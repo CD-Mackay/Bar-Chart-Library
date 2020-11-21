@@ -1,6 +1,12 @@
 body {
   text-align: center;
 }
+#barSelect {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: auto;
+}
 
 form {
   margin: auto;

@@ -1,5 +1,9 @@
-body {
-  text-align: center;
+
+.bar{
+  background:red;
+  color: red;
+  padding: 3px;
+  margin: 1px;
 }
 #barSelect {
   display: flex;
@@ -7,13 +11,8 @@ body {
   max-width: 800px;
   margin: auto;
 }
-
-form {
-  margin: auto;
-  border-style: solid;
-  padding-right: 0;
-  border-width: 1px;
-  max-width: 30vw;
+body {
+  text-align: center;
 }
 #chart{
   display: inline-block;
@@ -32,16 +31,24 @@ form {
   "yLabel chart"
   "yLabel chart"
 }
-.bar{
-  background:red;
-  color: red;
-  padding: 3px;
-  margin: 1px;
+
+form {
+  margin: auto;
+  border-style: solid;
+  padding-right: 0;
+  border-width: 1px;
+  max-width: 30vw;
 }
+
+
 #range {
   display: flex;
   justify-content: space-between;
   
+}
+#xLabel {
+  grid-area: xLabel;
+
 }
 #yLabel {
   height: auto;
@@ -52,8 +59,5 @@ form {
   margin-right: 0;
   margin-left: auto;
 }
-#xLabel {
-  grid-area: xLabel;
 
-}
 
